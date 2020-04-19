@@ -1,10 +1,13 @@
 var usuario=document.querySelector("#usuario");
 var contrasena=document.querySelector("#password");
 var correo=document.querySelector("#email");
-
-// label id
+var termin=document.getElementById("terminos").checked;
+var formulario=document.querySelector("#formulario");
+console.log(termin);
+// label 
 var Lnombre=document.querySelector("#labelNombre");
 var Lpassword=document.querySelector("#labelPassword");
+var lbemail=document.querySelector("#labelEmeil");
 
 function validarRegistro(){
     var user=usuario.value;
@@ -28,8 +31,10 @@ if (user!="") {
     }
 }
 //validando password
+
+
 if (password!="") {
-    var long=contrasena.value;
+    var long=contrasena.length;
     var expresion=/^[a-zA-Z0-9]*$/;
     if (long<6) {
         Lpassword.innerHTML+="<br> escriba por favor mas de seis caracteres";
@@ -40,6 +45,26 @@ if (password!="") {
     }
 }
 
-return true;
-    
+//validando email
+if (email!="") {
+
+    var expresion=/^[a-zA-Z0-9]*$/;
+  if (!expresion.test(email)) {
+        lbemail.innerHTML+="<br> verificar correo";
+        return false;
+    }
+}
+//validando chekbox
+
+if (caja==false) {
+    formulario.innerHTML+="<br> aceptar terminos y condicones";
+    usuario=user;
+    contrasena=password;
+    correo=email;
+
+     return false;
+}
+
+
+return false;
 }
