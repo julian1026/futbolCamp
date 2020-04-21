@@ -6,8 +6,8 @@
     <input type="password"   pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{6,}" class="form-control my-3" placeholder="Minimo seis caracteres, incluir numeros y una mayuscula" maxlength="6" name="password" id="password"  required>
     <label id="labelEmail" for="email" class="col-form-label">Correo Electronico:</label><br>
     <input type="email" class="form-control my-3" placeholder="escriba correctamente su correo electronico" name="email" id="email" >
-
-    <p><input type="checkbox" name="terminos" id="terminos" ><a href="#">Acepto Terminos</a> </p><br>
+    <input type="checkbox" id="terminos" value="1"><br>
+    <p><a href="#">Acepto Terminos</a> </p><br>
     <input type="submit" class="btn btn-danger" value="Enviar">
 </form>
 <?php

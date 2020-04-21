@@ -26,6 +26,7 @@
 </div>
 
  <script src="views/js/validarRegistro.js"></script>
+ <script src="views/js/ingresar.js"></script>
 
 </body>
 </html>

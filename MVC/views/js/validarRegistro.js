@@ -1,18 +1,22 @@
 var usuario=document.querySelector("#usuario");
 var contrasena=document.querySelector("#password");
 var correo=document.querySelector("#email");
-var termin=document.getElementById("terminos").checked;
+var terminos=document.getElementById("terminos");
 var formulario=document.querySelector("#formulario");
-console.log(termin);
+console.log(terminos);
+console.log(usuario);
 // label 
 var Lnombre=document.querySelector("#labelNombre");
 var Lpassword=document.querySelector("#labelPassword");
 var lbemail=document.querySelector("#labelEmeil");
 
+
 function validarRegistro(){
     var user=usuario.value;
     var password=contrasena.value;
     var email=correo.value;
+    var validar=terminos.value;
+    
 // validar formulario
 
 //validando usuario
@@ -56,15 +60,16 @@ if (email!="") {
 }
 //validando chekbox
 
-if (caja==false) {
-    formulario.innerHTML+="<br> aceptar terminos y condicones";
-    usuario=user;
-    contrasena=password;
-    correo=email;
+    if (validar!="1") {
+        formulario.innerHTML+="<br> aceptar terminos y condicones";
+        usuario=user;
+        contrasena=password;
+        correo=email;
+        console.log(validar);
+        return false;
+        
+    } 
 
-     return false;
-}
 
-
-return false;
+return true;
 }
